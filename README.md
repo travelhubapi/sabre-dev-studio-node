@@ -33,10 +33,10 @@ See http://developer.sabre.com
 
     var SabreDevStudioFlight = require('sabre-dev-studio-flight');
     var sabre_dev_studio_flight = new SabreDevStudioFlight({
-      user:     '8987',
-      group:    'STPS',
-      domain:   'EXT',
-      password: 'uR9gFO02',
+      user:     'USER',
+      group:    'GROUP',
+      domain:   'DOMAIN',
+      password: 'PASSWORD',
       uri:      'https://api.test.sabre.com'
     });
     var callback = function(error, data) {
@@ -54,11 +54,8 @@ See http://developer.sabre.com
 ## Contributing
 In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [Grunt](http://gruntjs.com/).
 
-## Release History
-_(Nothing yet)_
-
 ## License
-Copyright (c) 2014 Barrett Clark  
+Copyright (c) 2014 Sabre Corp
 Licensed under the MIT license.
 
 ## Disclaimer of Warranty and Limitation of Liability
