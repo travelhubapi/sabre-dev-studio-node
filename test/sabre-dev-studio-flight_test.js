@@ -9,11 +9,9 @@ nock.disableNetConnect();
 module.exports = {
   setUp: function(callback) {
     this.sabre_dev_studio_flight = new SabreDevStudioFlight({
-      user:     'USER',
-      group:    'GROUP',
-      domain:   'DOMAIN',
-      password: 'PASSWORD',
-      uri:      'https://api.test.sabre.com'
+      client_id:     'V1:USER:GROUP:DOMAIN',
+      client_secret: 'PASSWORD',
+      uri:           'https://api.test.sabre.com'
     });
     this.base_url = "https://api.test.sabre.com";
     var token = 'this_is_a_fake_token';

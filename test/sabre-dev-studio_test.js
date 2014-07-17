@@ -27,11 +27,9 @@ nock.disableNetConnect();
 module.exports = {
   setUp: function(callback) {
     this.sabre_dev_studio = new SabreDevStudio({
-      user:     'USER',
-      group:    'GROUP',
-      domain:   'DOMAIN',
-      password: 'PASSWORD',
-      uri:      'https://api.test.sabre.com'
+      client_id:     'V1:USER:GROUP:DOMAIN',
+      client_secret: 'PASSWORD',
+      uri:           'https://api.test.sabre.com'
     });
     callback();
   },
@@ -39,7 +37,7 @@ module.exports = {
     callback();
   },
   testConfiguration: function(test) {
-    test.equal('USER', this.sabre_dev_studio.config.user);
+    test.equal('V1:USER:GROUP:DOMAIN', this.sabre_dev_studio.config.client_id);
     test.done();
   },
   testBaseAPICallFetchesAccessToken: function(test) {
