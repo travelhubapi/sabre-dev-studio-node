@@ -7,11 +7,9 @@ Install the module with: `npm install sabre-dev-studio`
 
     var SabreDevStudio = require('sabre-dev-studio');
     var sabre_dev_studio = new SabreDevStudio({
-      user:     'USER',
-      group:    'GROUP',
-      domain:   'DOMAIN',
-      password: 'PASSWORD',
-      uri:      'https://api.test.sabre.com'
+      client_id:     'V1:1234:ABCD:XYZ',
+      client_secret: 'SeKr1T',
+      uri:           'https://api.test.sabre.com'
     });
     var options = {};
     var callback = function(error, data) {
@@ -33,11 +31,9 @@ See http://developer.sabre.com
 
     var SabreDevStudioFlight = require('sabre-dev-studio-flight');
     var sabre_dev_studio_flight = new SabreDevStudioFlight({
-      user:     'USER',
-      group:    'GROUP',
-      domain:   'DOMAIN',
-      password: 'PASSWORD',
-      uri:      'https://api.test.sabre.com'
+      client_id:     'V1:1234:ABCD:XYZ',
+      client_secret: 'SeKr1T',
+      uri:           'https://api.test.sabre.com'
     });
     var callback = function(error, data) {
       if (error) {
