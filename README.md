@@ -2,6 +2,8 @@
 
 NodeJS wrapper for the Sabre Dev Studio API
 
+[![Build Status](https://travis-ci.org/SabreDevStudio/sabre-dev-studio-node.svg)](https://travis-ci.org/SabreDevStudio/sabre-dev-studio-node)
+
 ## Getting Started
 Install the module with: `npm install sabre-dev-studio`
 
