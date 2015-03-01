@@ -18,7 +18,7 @@ Install the module with: `npm install sabre-dev-studio`
       if (error) {
         console.log(error);
       } else {
-        console.log(JSON.parse(data));
+        console.log(JSON.stringify(JSON.parse(data)));
       }
     };
     sabre_dev_studio.get('/v1/shop/themes', options, callback);
@@ -31,7 +31,7 @@ See http://developer.sabre.com
 
 ### Using the Flight API:
 
-    var SabreDevStudioFlight = require('sabre-dev-studio-flight');
+    var SabreDevStudioFlight = require('sabre-dev-studio/lib/sabre-dev-studio-flight');
     var sabre_dev_studio_flight = new SabreDevStudioFlight({
       client_id:     'V1:1234:ABCD:XYZ',
       client_secret: 'SeKr1T',
@@ -43,7 +43,7 @@ See http://developer.sabre.com
         console.log(error);
       } else {
         // Your success handling here
-        console.log(JSON.parse(data));
+        console.log(JSON.stringify(JSON.parse(data)));
       }
     };
     sabre_dev_studio_flight.travel_theme_lookup(callback);
