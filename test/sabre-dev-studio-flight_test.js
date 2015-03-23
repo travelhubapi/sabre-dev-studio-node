@@ -27,7 +27,7 @@ module.exports = {
   },
   testAirShoppingThemeAPI: function(test) {
     var stub_request_get = nock(this.base_url)
-        .get('/v1/shop/themes')
+        .get('/v1/lists/supported/shop/themes')
         .replyWithFile(200, __dirname + '/fixtures/air_shopping_themes.json')
         ;
     this.sabre_dev_studio_flight.travel_theme_lookup(function(error, data) {
@@ -42,7 +42,7 @@ module.exports = {
   testThemeAirportLookupAPI: function(test) {
     var theme = 'DISNEY';
     var stub_request_get = nock(this.base_url)
-        .get('/v1/shop/themes/' + theme)
+        .get('/v1/lists/supported/shop/themes/' + theme)
         .replyWithFile(200, __dirname + '/fixtures/theme_airport_lookup.json')
         ;
     this.sabre_dev_studio_flight.theme_airport_lookup(theme, function(error, data) {
@@ -123,6 +123,86 @@ module.exports = {
     });
     stub_request_get.isDone();
   },
+
+  testBargainFinderMaxAPI: function (test) {
+    var options = {
+      'mode': 'live',
+      'Content-Type': 'application/json'
+    };
+    var stub_request_post = nock(this.base_url)
+            .post('/v1.8.5/shop/flights?' + qs.stringify(options))
+            .replyWithFile(200, __dirname + '/fixtures/bargain_finder_max.json')
+        ;
+    this.sabre_dev_studio_flight.bargain_finder_max('', function (error, data) {
+      test.ok(data);
+      var rs = JSON.parse(data);
+      test.equal(1, rs.OTA_AirLowFareSearchRS.PricedItineraries.PricedItinerary.length);
+    });
+    setTimeout(function () {
+      test.ok(stub_request_post.isDone());
+      test.done();
+    }, 50);
+  },
+
+  testBargainFinderMaxAPIValidErrorResponse: function (test) {
+    var options = {
+      'mode': 'live',
+      'Content-Type': 'application/json'
+    };
+    var stub_request_post = nock(this.base_url)
+            .post('/v1.8.5/shop/flights?' + qs.stringify(options))
+            .replyWithFile(200, __dirname + '/fixtures/bargain_finder_max_error.json')
+        ;
+    this.sabre_dev_studio_flight.bargain_finder_max('', function (error, data) {
+      test.ok(data);
+      var rs = JSON.parse(data);
+      test.ok(rs.msg.indexOf("NO FIRST CABIN AVAILABLE") > 0);
+    });
+    setTimeout(function () {
+      test.ok(stub_request_post.isDone());
+      test.done();
+    }, 50);
+  },
+
+  testAlternateDateAPI: function (test) {
+    var options = {
+      'mode': 'live',
+      'Content-Type': 'application/json'
+    };
+    var stub_request_post = nock(this.base_url)
+            .post('/v1.8.5/shop/altdates/flights?' + qs.stringify(options))
+            .replyWithFile(200, __dirname + '/fixtures/alternate_date.json')
+        ;
+    this.sabre_dev_studio_flight.alternate_date('', function (error, data) {
+      test.ok(data);
+      var rs = JSON.parse(data);
+      test.equal(8, rs.OTA_AirLowFareSearchRS.PricedItineraries.PricedItinerary.length);
+    });
+    setTimeout(function () {
+      test.ok(stub_request_post.isDone());
+      test.done();
+    }, 50);
+  },
+
+  testAdvancedCalendarSearchAPI: function (test) {
+    var options = {
+      'Content-Type': 'application/json'
+    };
+    var stub_request_post = nock(this.base_url)
+            .post('/v1.8.1/shop/calendar/flights?' + qs.stringify(options))
+            .replyWithFile(200, __dirname + '/fixtures/advanced_calendar_search.json')
+        ;
+    this.sabre_dev_studio_flight.advanced_calendar_search('', function (error, data) {
+      test.ok(data);
+      var rs = JSON.parse(data);
+      test.equal(17, rs.OTA_AirLowFareSearchRS.PricedItineraries.PricedItinerary.length);
+    });
+    setTimeout(function () {
+      test.ok(stub_request_post.isDone());
+      test.done();
+    }, 50);
+  },
+
   testLowFareForecastAPI: function(test) {
     var options = {
       origin        : 'JFK',
@@ -233,4 +313,4 @@ module.exports = {
     });
     stub_request_get.isDone();
   }
-}
+};

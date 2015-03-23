@@ -5,7 +5,7 @@
       "Links": [
         {
           "rel": "destinations",
-          "href": "https://api.test.sabre.com/v1/shop/themes/BEACH"
+          "href": "https://api.test.sabre.com/v1/lists/supported/shop/themes/BEACH"
         }
       ]
     },
@@ -14,7 +14,7 @@
       "Links": [
         {
           "rel": "destinations",
-          "href": "https://api.test.sabre.com/v1/shop/themes/DISNEY"
+          "href": "https://api.test.sabre.com/v1/lists/supported/shop/themes/DISNEY"
         }
       ]
     },
@@ -23,7 +23,7 @@
       "Links": [
         {
           "rel": "destinations",
-          "href": "https://api.test.sabre.com/v1/shop/themes/GAMBLING"
+          "href": "https://api.test.sabre.com/v1/lists/supported/shop/themes/GAMBLING"
         }
       ]
     },
@@ -32,7 +32,7 @@
       "Links": [
         {
           "rel": "destinations",
-          "href": "https://api.test.sabre.com/v1/shop/themes/HISTORIC"
+          "href": "https://api.test.sabre.com/v1/lists/supported/shop/themes/HISTORIC"
         }
       ]
     },
@@ -41,7 +41,7 @@
       "Links": [
         {
           "rel": "destinations",
-          "href": "https://api.test.sabre.com/v1/shop/themes/MOUNTAINS"
+          "href": "https://api.test.sabre.com/v1/lists/supported/shop/themes/MOUNTAINS"
         }
       ]
     },
@@ -50,7 +50,7 @@
       "Links": [
         {
           "rel": "destinations",
-          "href": "https://api.test.sabre.com/v1/shop/themes/NATIONAL-PARKS"
+          "href": "https://api.test.sabre.com/v1/lists/supported/shop/themes/NATIONAL-PARKS"
         }
       ]
     },
@@ -59,7 +59,7 @@
       "Links": [
         {
           "rel": "destinations",
-          "href": "https://api.test.sabre.com/v1/shop/themes/OUTDOORS"
+          "href": "https://api.test.sabre.com/v1/lists/supported/shop/themes/OUTDOORS"
         }
       ]
     },
@@ -68,7 +68,7 @@
       "Links": [
         {
           "rel": "destinations",
-          "href": "https://api.test.sabre.com/v1/shop/themes/ROMANTIC"
+          "href": "https://api.test.sabre.com/v1/lists/supported/shop/themes/ROMANTIC"
         }
       ]
     },
@@ -77,7 +77,7 @@
       "Links": [
         {
           "rel": "destinations",
-          "href": "https://api.test.sabre.com/v1/shop/themes/SHOPPING"
+          "href": "https://api.test.sabre.com/v1/lists/supported/shop/themes/SHOPPING"
         }
       ]
     },
@@ -86,7 +86,7 @@
       "Links": [
         {
           "rel": "destinations",
-          "href": "https://api.test.sabre.com/v1/shop/themes/SKIING"
+          "href": "https://api.test.sabre.com/v1/lists/supported/shop/themes/SKIING"
         }
       ]
     },
@@ -95,7 +95,7 @@
       "Links": [
         {
           "rel": "destinations",
-          "href": "https://api.test.sabre.com/v1/shop/themes/THEME-PARK"
+          "href": "https://api.test.sabre.com/v1/lists/supported/shop/themes/THEME-PARK"
         }
       ]
     }
@@ -103,11 +103,11 @@
   "Links": [
     {
       "rel": "self",
-      "href": "https://api.test.sabre.com/v1/shop/themes"
+      "href": "https://api.test.sabre.com/v1/lists/supported/shop/themes"
     },
     {
       "rel": "linkTemplate",
-      "href": "https://api.test.sabre.com/v1/shop/themes"
+      "href": "https://api.test.sabre.com/v1/lists/supported/shop/themes"
     }
   ]
 }
