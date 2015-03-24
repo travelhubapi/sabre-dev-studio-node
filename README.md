@@ -21,7 +21,7 @@ Install the module with: `npm install sabre-dev-studio`
         console.log(JSON.stringify(JSON.parse(data)));
       }
     };
-    sabre_dev_studio.get('/v1/shop/themes', options, callback);
+    sabre_dev_studio.get('/v1/lists/supported/shop/themes', options, callback);
 
 ## Documentation
 
