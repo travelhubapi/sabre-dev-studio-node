@@ -1,7 +1,7 @@
 {
   "name": "sabre-dev-studio",
   "description": "NodeJS wrapper for the Sabre Dev Studio API",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "homepage": "http://developer.sabre.com",
   "author": {
     "name": "Barrett Clark",
@@ -33,12 +33,12 @@
     "grunt-contrib-watch": "~0.5.3",
     "grunt": "~0.4.4",
     "nock": "~0.28.2",
-    "moment": "~2.6.0"
+    "moment": "~2.10.3"
   },
   "dependencies": {
-    "oauth": "~0.9.11",
-    "bunyan": "~0.22.3",
-    "simple-errors": "~0.0.4"
+    "oauth": "~0.9.13",
+    "bunyan": "~1.4.0",
+    "simple-errors": "~1.0.0"
   },
   "keywords": []
 }
