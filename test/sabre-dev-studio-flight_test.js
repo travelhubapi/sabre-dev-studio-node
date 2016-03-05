@@ -16,7 +16,11 @@ module.exports = {
     this.base_url = "https://api.test.sabre.com";
     var token = 'this_is_a_fake_token';
     this.stub_request = nock(this.base_url)
-        .post('/v2/auth/token', 'grant_type=client_credentials&client_id=VjE6VVNFUjpHUk9VUDpET01BSU4%3D&client_secret=UEFTU1dPUkQ%3D&code=')
+        .post('/v2/auth/token', {
+          grant_type: 'client_credentials',
+          client_id: 'VjE6VVNFUjpHUk9VUDpET01BSU4=',
+          client_secret: 'UEFTU1dPUkQ='
+        })
         .reply(200, { access_token: token })
         ;
     callback();
