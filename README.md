@@ -23,6 +23,18 @@ Install the module with: `npm install sabre-dev-studio`
     };
     sabre_dev_studio.get('/v1/lists/supported/shop/themes', options, callback);
 
+### Options
+
+    new SabreDevStudioFlight(options)
+
+`options` - an object containing the following items:
+
+- `client_id` - credentials: client ID provided by Sabre
+- `client_secret` - credentials: client secret provided by sabre
+- `uri` - base URI of the API to use
+- `gzip` - (optional) enables gzip; defaults to `true`
+- `access_token` - (optional) an existing access token to use; will not be renewed unless credentials are supplied
+
 ## Documentation
 
 See http://developer.sabre.com
