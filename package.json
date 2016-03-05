@@ -36,9 +36,10 @@
     "nock": "^7.3.0"
   },
   "dependencies": {
-    "oauth": "~0.9.13",
     "bunyan": "~1.4.0",
-    "simple-errors": "~1.0.0"
+    "request": "^2.69.0",
+    "simple-errors": "~1.0.0",
+    "simple-oauth2": "^0.5.1"
   },
   "keywords": []
 }
